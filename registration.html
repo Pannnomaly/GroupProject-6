@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hotel Sign Up</title>
+  </head>
+  <body class="bg-white min-h-screen flex flex-col justify-center items-center py-10">
+    <h1 class="text-3xl font-serif text-[#8c7761] mb-10">MonkeyDB Hostels</h1>
+
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+      <!-- Left Section -->
+      <div>
+        <img src="./images/room-01.jpg" class="rounded-xl shadow w-full mb-6" />
+
+        <h2 class="text-2xl font-semibold mb-2">good places for your vacation.</h2>
+
+        <div class="bg-[#d9cbbb] rounded-xl p-6 w-auto mt-7">
+          <h3 class="font-semibold mb-1">Basic dialog title</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            A dialog is a type of modal window that appears in front of app content to provide
+            critical information, or prompt for a decision to be made.
+          </p>
+          <div class="flex justify-end space-x-4 text-sm font-medium">
+            <button class="hover:underline">Action 2</button>
+            <button class="hover:underline">Action 1</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex flex-col justify-start max-w-full">
+        <h2 class="text-2xl font-semibold mb-4">Sign up</h2>
+
+        <!-- Google Button -->
+        <button
+          class="w-full bg-gray-700 text-white py-3 rounded-lg flex justify-center items-center gap-3 mb-4 hover:bg-gray-800 transition"
+        >
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5" />
+          <p>Continue with Google</p>
+        </button>
+
+        <!-- Facebook Button -->
+        <button
+          class="w-full bg-blue-400 text-white py-3 rounded-lg flex justify-center items-center gap-3 mb-6 hover:bg-blue-700 transition"
+        >
+          <img src="https://files.svgcdn.io/streamline-color/meta.svg" class="w-7" />
+          <p>Continue with Facebook</p>
+        </button>
+
+        <!-- Form -->
+        <div class="border rounded-xl p-6">
+          <label class="text-sm">Email</label>
+          <input
+            type="email"
+            placeholder="email@email.com"
+            class="w-full border px-3 py-2 rounded-lg mt-1 mb-4 focus:ring-2 focus:ring-black focus:outline-none"
+          />
+
+          <label class="text-sm">Password</label>
+          <input
+            type="password"
+            placeholder="12345"
+            class="w-full border px-3 py-2 rounded-lg mt-1 mb-6 focus:ring-2 focus:ring-black focus:outline-none"
+          />
+
+          <button class="w-full bg-[#d9cbbb] text-gray-700 py-3 rounded-lg mb-4 hover:bg-[#e2dad1]">
+            Create Your Accout
+          </button>
+
+          <a href="#" class="text-sm text-gray-600 hover:underline">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
