@@ -26,7 +26,7 @@
         --font-color-secondary: #808080;
 
         --nav-height: 64px;
-        --footer-height: 320px
+        --footer-height: 256px
       }
     </style>
 </head>
@@ -34,14 +34,14 @@
     <header class="h-[var(--nav-height)] bg-[var(--background-color-nav)] shadow-[var(--box-shadow)] text-[var(--font-color-primary)] font-medium">
         <nav class="h-[var(--nav-height)] flex items-center justify-between no-underline text-[22px]">
             <div class="flex items-center pl-10">
-                <span><a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo"></a></span>
-                <span><a href="#"><p class="font-bold">MonkeyDB</p></a></span>
-                <span><a href="#"><p class="text-[var(--font-color-secondary)]">Hostel</p></a></span>
+                <div><a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+                <div><a href="#"><p class="font-bold">MonkeyDB</p></a></div>
+                <div><a href="#"><p class="text-[var(--font-color-secondary)]">Hostel</p></a></div>
             </div>
             <div class="flex items-center gap-x-10 pr-10">
-                <span><a href="#"><p>User</p></a></span>
-                <span><a href="#"><p>Availability</p></a></span>
-                <span><a href="#"><p>Contact Us</p></a></span>
+                <div><a href="#"><p>User</p></a></div>
+                <div><a href="#"><p>Availability</p></a></div>
+                <div><a href="#"><p>Contact Us</p></a></div>
             </div>
         </nav>
     </header>
@@ -51,39 +51,41 @@
     </main>
 
     <footer class="bg-[var(--background-color-footer)] h-[var(--footer-height)] shadow-[var(--box-shadow)] flex flex-col items-center justify-between text-[var(--font-color-primary)] font-medium">
-      <div class="flex">
-        <div><span><a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo"></a></span></div>
-        <div>
-          <div><span>SITE MAP</span></div>
-          <div>
-            <span><a href="#"><p>User</p></a></span>
-            <span><a href="#"><p>Availability</p></a></span>
-            <span><a href="#"><p>Contact Us</p></a></span>
+      <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
+        <div class="my-auto">
+          <div><a href="#"><img class="w-18" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div><p class="font-bold">SITE MAP</p></div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div><a href="#"><p>User</p></a></div>
+            <div><a href="#"><p>Availability</p></a></div>
+            <div><a href="#"><p>Contact Us</p></a></div>
           </div>
         </div>
-        <div>
-          <div><span>SOCIALS</span></div>
-          <div>
-            <span><a href="#"><p>Facebook</p></a></span>
-            <span><a href="#"><p>Instagram</p></a></span>
-            <span><a href="#"><p>Twitter</p></a></span>
+        <div class="flex flex-col justify-center">
+          <div><p class="font-bold">SOCIALS</p></div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div><a href="#"><p>Facebook</p></a></div>
+            <div><a href="#"><p>Instagram</p></a></div>
+            <div><a href="#"><p>Twitter</p></a></div>
           </div>
         </div>
-        <div>
-          <div>
-            <div><span>HEAD OFFICE</span></div>
-            <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?</span></div>
+        <div class="flex flex-col justify-between h-full">
+          <div class="flex flex-col w-2/3">
+            <p class="font-bold">HEAD OFFICE</p>
+            <div class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?</div>
           </div>
-          <div>
-            <div><span>NEWS LETTER</span></div>
-            <div><input type="email" name="" id=""></div>
+          <div class="flex flex-col pb-5">
+            <div>NEWS LETTER</div>
+            <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3"><input type="email" name="" id="" placeholder="Enter your email address" class="w-full"></div>
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-around py-5 w-full">
-        <span>contact@gmail.com</span>
-        <span>084-444-4444</span>
-        <span>© MonkeyDB Hostel All rights reserved</span>
+      <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
+        <div>contact@gmail.com</div>
+        <div>084-444-4444</div>
+        <div>© MonkeyDB Hostel All rights reserved</div>
       </div>
     </footer>
 </body>
