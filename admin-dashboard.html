@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Admin Dashboard</title>
+    </head>
+    <body class="flex flex-row">
+        <aside id="sidebar" class="top-0 left-0 h-screen bg-gray-800 text-white">
+            <div class="flex flex-col h-full">
+
+                <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
+                    <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
+                </div>
+                
+                <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
+                <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
+                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                        <span>Room Lists</span>
+                    </a>
+                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                        <span>Booking Page</span>
+                    </a>
+                </nav>
+
+                <div id="copyright" class="p-4 border-t border-gray-700">
+                    <p class="text-sm text-gray-400">© 2025 MonkeyDB</p>
+                </div>
+            </div>
+        </aside>
+        <main class="bg-slate-200 w-screen">
+        </main>
+    </body>
+</html>
