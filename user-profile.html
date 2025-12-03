@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
+
+        --background-color-nav: #D9D9D9;
+        --background-color-footer: #635F58;
+        --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+        --font-color-primary: #111;
+        --font-color-secondary: #808080;
+
+        --nav-height: 64px;
+        --footer-height: 256px
+      }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="h-[var(--nav-height)] bg-[var(--background-color-nav)] shadow-[var(--box-shadow)] text-[var(--font-color-primary)] font-medium">
+        <nav class="h-[var(--nav-height)] flex items-center justify-between no-underline text-[22px]">
+            <div class="flex items-center pl-10">
+                <div><a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+                <div><a href="#"><p class="font-bold">MonkeyDB</p></a></div>
+                <div><a href="#"><p class="text-[var(--font-color-secondary)]">Hostel</p></a></div>
+            </div>
+            <div class="flex items-center gap-x-10 pr-10">
+                <div><a href="#"><p>User</p></a></div>
+                <div><a href="#"><p>Availability</p></a></div>
+                <div><a href="#"><p>Contact Us</p></a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="h-screen">
+        <div>
+          <div><img src="" alt=""></div>
+          <div><h2>Jane Doe</h2></div>
+          <div><h3>Identity Verification</h3></div>
+          <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat unde expedita recusandae est exercitationem placeat vero at, sint quaerat.</p></div>
+        </div>
+        <div>
+          <div>
+            <div><h2>Hello, Jane Doe</h2></div>
+            <div><p>Joined in 2021</p></div>
+          </div>
+          <div>
+            <div><h3>Booking History</h3></div>
+            <div>
+              <div>
+                <div><img src="" alt=""></div>
+                <div>
+                  <div>Fully Furnished Apartment</div>
+                  <div>Check in: 12 Mar 2021</div>
+                  <div>Duration: Long (2 - 5 Years)</div>
+                  <div>Guests: 4 Adults</div>
+                  <div>$ 1000 USD</div>
+                </div>
+              </div>
+              <div>
+                <div><img src="" alt=""></div>
+                <div>
+                  <div>Fully Furnished Apartment</div>
+                  <div>Check in: 12 Mar 2021</div>
+                  <div>Duration: Long (2 - 5 Years)</div>
+                  <div>Guests: 4 Adults</div>
+                  <div>$ 1000 USD</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <button>Backward</button>
+            </div>
+            <div>
+              <button>Forward</button>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer class="bg-[var(--background-color-footer)] h-[var(--footer-height)] shadow-[var(--box-shadow)] flex flex-col items-center justify-between text-[var(--font-color-primary)] font-medium">
+      <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
+        <div class="my-auto">
+          <div><a href="#"><img class="w-18" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div><p class="font-bold">SITE MAP</p></div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div><a href="#"><p>User</p></a></div>
+            <div><a href="#"><p>Availability</p></a></div>
+            <div><a href="#"><p>Contact Us</p></a></div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div><p class="font-bold">SOCIALS</p></div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div><a href="#"><p>Facebook</p></a></div>
+            <div><a href="#"><p>Instagram</p></a></div>
+            <div><a href="#"><p>Twitter</p></a></div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between h-full">
+          <div class="flex flex-col w-2/3">
+            <p class="font-bold">HEAD OFFICE</p>
+            <div class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?</div>
+          </div>
+          <div class="flex flex-col pb-5">
+            <div>NEWS LETTER</div>
+            <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3"><input type="email" name="" id="" placeholder="Enter your email address" class="w-full"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
+        <div>contact@gmail.com</div>
+        <div>084-444-4444</div>
+        <div>© MonkeyDB Hostel All rights reserved</div>
+      </div>
+    </footer>
+</body>
+</html>
