@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Hotel UI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>monkyDB Hostel</title>
   </head>
   <body class="bg-[#f6f6f6] text-gray-800">
     <!-- NAVBAR -->
@@ -21,8 +22,49 @@
       </button>
     </nav>
 
-    <!-- SEARCH BAR -->
-    <section class="w-full flex justify-center mt-10 px-4">
+    <!-- Sign In and Register Bar -->
+    <!-- Mobile -->
+    <section class="md:hidden flex justify-center w-full mt-10 px-4">
+      <div class="bg-white shadow-lg rounded-2xl flex flex-col gap-4 px-4 py-5 w-full max-w-md">
+        <!-- Guests -->
+        <div class="relative">
+          <button class="bg-red-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+            2 guests
+          </button>
+
+          <!-- show/hide guests -->
+          <div class="absolute bg-white shadow-lg rounded-xl p-4 text-sm mt-2 hidden">
+            <p>Adults 0</p>
+            <p>Child 0</p>
+          </div>
+        </div>
+
+        <!-- Check In / Check Out -->
+        <div class="w-full">
+          <button
+            class="border border-black bg-gray-200 w-full px-4 py-2 rounded-xl hover:bg-gray-100 font-medium"
+          >
+            Check In || Check Out
+          </button>
+        </div>
+
+        <div class="flex justify-between items-center w-full">
+          <button class="px-4 py-3 rounded-xl hover:bg-gray-100 font-medium w-full text-left">
+            Sign in / Register
+          </button>
+          <img
+            src="./images/room-detail/person.svg"
+            height="32px"
+            width="32px"
+            alt="user-profile"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign In and Register Bar -->
+    <!-- Desktop -->
+    <section class="hidden md:flex justify-center w-full mt-10 px-4">
       <div
         class="bg-white shadow-lg rounded-full flex items-center gap-4 px-6 py-3 w-full max-w-4xl"
       >
@@ -61,20 +103,41 @@
       </div>
     </section>
 
-    <!-- IMAGE SLIDER MOCKUP -->
-    <section class="w-full flex justify-center mt-10 px-4">
-      <div class="relative w-full max-w-4xl">
-        <div class="flex overflow-hidden rounded-2xl shadow-xl">
-          <img
-            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1"
-            class="w-full h-72 object-cover"
-          />
+    <!-- IMAGE SLIDER Swiper JS-->
+    <section class="w-full flex justify-center mt-10">
+      <div class="swiper mySwiper w-full max-w-4xl">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/one-bed/227707266.png"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/two-bed/138761299.png"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
-        <div class="flex justify-center mt-3 space-x-2">
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-          <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next text-gray-600"></div>
+        <div class="swiper-button-prev text-gray-600"></div>
       </div>
     </section>
 
@@ -83,7 +146,7 @@
       class="w-full max-w-6xl mx-auto mt-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
     >
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -92,7 +155,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/family/olexandr-ignatov-w72a24brINI-unsplash_1.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -101,7 +164,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/family/point3d-commercial-imaging-ltd-_Swg04CP0bU-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -110,7 +173,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/two-bed/138761299.png" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -119,7 +182,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/two-bed/139042512.png" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -128,7 +191,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/two-bed/erin-brundage-w8mrCVlTPhw-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -137,7 +200,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/two-bed/pexels-pixabay-276671.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -146,7 +209,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/two-bed/yizack-rangel-O_XmoLGBMrw-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -155,7 +218,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/one-bed/227707266.png" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -164,7 +227,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/one-bed/alex-tyson-CMKobKs3mn8-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -173,7 +236,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/one-bed/christina-radevich-kQjEq2bNFS0-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -182,7 +245,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/one-bed/pexels-andrew-3201763.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -191,7 +254,7 @@
       </div>
 
       <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <div class="w-full h-40 bg-gray-200 rounded-lg"></div>
+        <img src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg" class="w-full h-40 bg-gray-200 rounded-lg"></img>
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
         <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
@@ -259,5 +322,36 @@
         </div>
       </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 2.5,
+          slideShadows: false,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
