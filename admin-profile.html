@@ -19,18 +19,11 @@
         --font-sans: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
 
-        --background-color-nav: #D9D9D9;
-        --background-color-footer: #635F58;
         --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
-        --font-color-primary: #111;
-        --font-color-secondary: #808080;
-
-        --nav-height: 64px;
-        --footer-height: 256px
       }
     </style>
 </head>
-<body class="flex flex-row">
+<body class="flex flex-row font-sans">
     <aside id="sidebar" class="h-screen bg-gray-600 text-white">
         <div class="flex flex-col h-full">
             <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
@@ -56,7 +49,7 @@
                 </div>
                 <div class="flex flex-col justify-center">
                     <div>
-                        <a href="#"><p class="text-base text-gray-400">Admin Pann</p></a>
+                        <a href="#"><p class="text-base text-gray-400 hover:text-white">Admin Pann</p></a>
                     </div>
                     <div>
                         <p class="text-sm text-gray-400">pann@hotel.com</p>
@@ -69,10 +62,10 @@
             </div>
         </div>
     </aside>
-    <main class="bg-slate-200 w-screen">
-        <div class="flex ">
-            <div><h2>Profile</h2></div>
-            <div><a href="#"><img src="" alt=""></a></div>
+    <main class="bg-slate-200 w-screen flex flex-col justify-center items-center">
+        <div class="w-[95%] flex justify-between items-center bg-gray-600 text-gray-300 p-3">
+            <div><h2 class="text-4xl font-bold">Profile</h2></div>
+            <div><a href="#"><img src="images/user-circle.svg" alt="gear logo" width="35px" height="35px"></a></div>
         </div>
         <div>
             <div>
