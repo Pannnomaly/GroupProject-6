@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
+
+        --background-color-nav: #D9D9D9;
+        --background-color-footer: #635F58;
+        --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+        --font-color-primary: #111;
+        --font-color-secondary: #808080;
+
+        --nav-height: 64px;
+        --footer-height: 256px
+      }
+    </style>
+</head>
+<body class="flex flex-row">
+    <aside id="sidebar" class="h-screen bg-gray-600 text-white">
+        <div class="flex flex-col h-full">
+            <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
+                <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
+            </div>
+                
+            <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
+            <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
+                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <span>Room Lists</span>
+                </a>
+                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <span>Booking Page</span>
+                </a>
+            </nav>
+
+            <div id="adminProfile" class="p-4 border-t border-gray-700 hover:bg-gray-700 flex justify-center items-center gap-x-3 cursor-pointer">
+                <div>
+                    <a href="#"><img src="images/user-circle.svg" alt="admin logo" width="35px" height="35px"></a>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div>
+                        <a href="#"><p class="text-base text-gray-400">Admin Pann</p></a>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">pann@hotel.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="copyright" class="p-4 border-t border-gray-700">
+                <p class="text-sm text-gray-400 text-center">© 2025 MonkeyDB</p>
+            </div>
+        </div>
+    </aside>
+    <main class="bg-slate-200 w-screen">
+        
+    </main>
+    </body>
+</html>
