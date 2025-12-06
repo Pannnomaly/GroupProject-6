@@ -19,12 +19,17 @@
         --font-sans: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
 
+        --background-color-mainTop: #D9D9D9;
+        --background-color-mainBottom: #F5F5F5;
+        --background-color-nav: #E8EAEC;
+        --font-color-primary: #111;
+
         --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
       }
     </style>
 </head>
 <body class="flex flex-row font-sans">
-    <aside id="sidebar" class="h-screen bg-gray-600 text-white">
+    <aside id="sidebar" class="h-screen bg-[var(--background-color-nav)] text-[var(--font-color-primary)]">
         <div class="flex flex-col h-full">
             <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
                 <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
@@ -32,38 +37,38 @@
                 
             <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
             <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
-                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
                     <span>Dashboard</span>
                 </a>
-                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
                     <span>Room Lists</span>
                 </a>
-                <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
                     <span>Booking Page</span>
                 </a>
             </nav>
 
-            <div id="adminProfile" class="p-4 border-t border-gray-700 hover:bg-gray-700 flex justify-center items-center gap-x-3 cursor-pointer">
+            <div id="adminProfile" class="p-4 border-t border-gray-700 hover:bg-[#D9D9D9] flex justify-center items-center gap-x-3 cursor-pointer">
                 <div>
                     <a href="#"><img src="images/user-circle.svg" alt="admin logo" width="35px" height="35px"></a>
                 </div>
                 <div class="flex flex-col justify-center">
                     <div>
-                        <a href="#"><p class="text-base text-gray-400 hover:text-white">Admin Pann</p></a>
+                        <a href="#"><p class="text-base text-[var(--font-color-primary)]">Admin Pann</p></a>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-400">pann@hotel.com</p>
+                        <p class="text-sm text-[var(--font-color-primary)]">pann@hotel.com</p>
                     </div>
                 </div>
             </div>
             
             <div id="copyright" class="p-4 border-t border-gray-700">
-                <p class="text-sm text-gray-400 text-center">© 2025 MonkeyDB</p>
+                <p class="text-sm text-[var(--font-color-primary)] text-center">© 2025 MonkeyDB</p>
             </div>
         </div>
     </aside>
-    <main class="bg-slate-200 w-screen flex flex-col justify-center items-center">
-        <div class="w-[95%] flex justify-between items-center bg-gray-600 text-gray-300 p-3">
+    <main class="w-screen flex flex-col justify-center items-center">
+        <div class="w-[95%] flex justify-between items-center bg-[var(--background-color-mainTop)] text-[var(--font-color-primary)] p-3">
             <div><h2 class="text-4xl font-bold">Profile</h2></div>
             <div><a href="#"><img src="images/user-circle.svg" alt="gear logo" width="35px" height="35px"></a></div>
         </div>
