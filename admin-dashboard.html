@@ -6,48 +6,140 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <title>Admin Dashboard</title>
     </head>
-    <body class="flex flex-row">
+    <body class="flex flex-row h-screen overflow-hidden">
+        <!-- md:block to show aside-tag when medium screen or higher-->
         <aside id="sidebar" class="bg-gray-800 text-white top-0 left-0 h-screen">
             <div class="flex flex-col h-full">
 
-                <div id="header" class="border-gray-700 flex items-center justify-center p-4 border-b">
-                    <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
+                <div id="header" class="border-gray-700 p-4 border-b flex flex-row items-center justify-center gap-4">
+                    <span class="font-bold tracking-wider uppercase">Hotel Management</span>
                 </div>
 
                 <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
                 <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white p-2 rounded-lg flex flex-row gap-2">
+                        <img src="./images/outline-dashboard-white.svg" alt=""/>
                         <span>Dashboard</span>
                     </a>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white p-2 rounded-lg flex flex-row gap-2">
+                        <img src="./images/list-rounded-white.svg" alt=""/>
                         <span>Room Lists</span>
                     </a>
-                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white p-2 rounded-lg flex flex-row gap-2">
+                        <img src="./images/book-outline-white.svg" alt=""/>
                         <span>Booking Page</span>
                     </a>
                 </nav>
 
-                <div id="copyright" class="border-gray-700 p-4 border-t">
-                    <p class="text-gray-400 text-sm">© 2025 MonkeyDB</p>
+                <div id="admin" class="border-gray-700 p-4 border-t flex flex-row items-center justify-center gap-4">
+                    <a href="#" class="hover:bg-gray-700 hover:text-white p-2 rounded-lg flex flex-row gap-2">
+                        <img src="./images/person-white.svg" alt=""/>
+                        <div class="flex flex-col">
+                            <span>Admin Manager</span>
+                            <span class="text-gray-300 text-sm">admin@hotmail.com</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </aside>
-        <main class="bg-slate-200 flex flex-col p-15 w-screen">
-            <h1>Dashboard</h1>
-            <div class="flex flex-row pt-5 pb-5 gap-5 flex-1">
-                <div class="bg-gray-50 flex-1"></div>
-                <div class="bg-gray-50 flex-1"></div>
-                <div class="bg-gray-50 flex-1"></div>
-            </div>
-            <div class="flex flex-row pt-5 pb-5 gap-5 flex-1">
-                <div class="bg-gray-50 flex-1"></div>
-                <div class="bg-gray-50 flex-1"></div>
-            </div>
-            <div class="flex flex-row pt-5 pb-5 flex-1">
-                <div class="bg-gray-50 flex-1"></div>
-            </div>
-            <div class="flex flex-row pt-5 pb-5 flex-1">
-                <div class="bg-gray-50 flex-1"></div>
+
+        <main class="bg-slate-200 flex flex-col flex-1">
+            <button id="menu-btn" class="bg-slate-200">
+                <a href="#"><img class="size-10 mt-3 mb-2 ml-4" src="./images/menu-burger-horizontal-bold-black.svg" alt=""></a>
+            </button>
+            <!-- overflow-y-auto add scrolling bar y-axis only to the dashboard -->
+            <div id="dashboard" class="flex flex-col flex-1 pl-4 overflow-y-auto">
+                <h1 class="text-3xl font-bold mt-4 mb-4">Dashboard</h1>
+                <div id="dashB-1" class="flex flex-row flex-wrap mb-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(33.33%-1rem)] flex justify-between">
+                        <div>
+                            <p>Total Booking</p>
+                            <p>85/120</p>
+                        </div>
+                        <div class="flex content-center bg-blue-300 p-2 rounded-lg">
+                            <img class="size-full" src="./images/bed-outline.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(33.33%-1rem)] flex justify-between">
+                        <div>
+                            <p>Check-in</p>
+                            <p>23</p>
+                        </div>
+                        <div class="flex content-center bg-green-300 p-2 rounded-lg">
+                            <img class="size-full" src="./images/check-circle.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(33.33%-1rem)] flex justify-between">
+                        <div>
+                            <p>Check-out</p>
+                            <p>23</p>
+                        </div>
+                        <div class="flex content-center bg-red-300 p-2 rounded-lg">
+                            <img class="size-full" src="./images/round-log-out.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div id="dashB-2" class="flex flex-row flex-wrap mb-4 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(50%-1rem)]">
+                        <div class="flex justify-between">
+                            <p>Recent Activities</p>
+                            <a href="#"><p>View All</p></a>
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>John Smith checked into - Room 201</p>
+                                <p class="text-gray-400 text-sm">2 hours ago</p>
+                            </div>
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>Room service request from Sarah Wilson - Room 105</p>
+                                <p class="text-gray-400 text-sm">3 hours ago</p>
+                            </div>
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>Payment recieved from Mike Tyson - 450 Baht</p>
+                                <p class="text-gray-400 text-sm">4 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(50%-1rem)]">
+                        <div class="flex justify-between">
+                            <p>Pending Tasks</p>
+                            <a href="#"><p>View All</p></a>
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>Clean - Room 201</p>
+                                <p class="text-gray-400 text-sm">Assign to คุณส้มจี๊ด</p>
+                            </div>
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>Room Service - Room 105</p>
+                                <p class="text-gray-400 text-sm">Assign to คุณเจ๊ก</p>
+                            </div>
+                            <div id="block1" class="bg-slate-50 p-5 rounded-lg">
+                                <p>Mantainance - Room 304</p>
+                                <p class="text-gray-400 text-sm">Assign to จ้างช่าง</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dashB-3" class="mb-4 mr-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full flex flex-col gap-4">
+                        <p>Graph Revenue</p>
+                        <img src="./images/revenue_graph.png" alt="">
+                    </div>
+                </div>
+                <div id="dashB-4" class="mb-4 mr-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full flex flex-col gap-4">
+                        <p>Quick Actions</p>
+                        <div class="flex flex-row justify-between items-end">
+                            <div class="flex flex-row gap-5">
+                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">New Booking</button>
+                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">Room Status</button>
+                            </div>
+                            <button id="add-new-option" class="bg-slate-300 p-2 rounded-lg cursor-pointer text-xl font-bold">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </body>
