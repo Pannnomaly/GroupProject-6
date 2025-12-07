@@ -7,32 +7,48 @@
         <title>Admin Dashboard</title>
     </head>
     <body class="flex flex-row">
-        <aside id="sidebar" class="top-0 left-0 h-screen bg-gray-800 text-white">
+        <aside id="sidebar" class="bg-gray-800 text-white top-0 left-0 h-screen">
             <div class="flex flex-col h-full">
 
-                <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
+                <div id="header" class="border-gray-700 flex items-center justify-center p-4 border-b">
                     <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
                 </div>
-                
+
                 <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
                 <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
-                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
                         <span>Dashboard</span>
                     </a>
-                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
                         <span>Room Lists</span>
                     </a>
-                    <a href="#" class="space-x-3 p-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white hover:font-medium">
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white space-x-3 p-2 rounded-lg hover:font-medium">
                         <span>Booking Page</span>
                     </a>
                 </nav>
 
-                <div id="copyright" class="p-4 border-t border-gray-700">
-                    <p class="text-sm text-gray-400">© 2025 MonkeyDB</p>
+                <div id="copyright" class="border-gray-700 p-4 border-t">
+                    <p class="text-gray-400 text-sm">© 2025 MonkeyDB</p>
                 </div>
             </div>
         </aside>
-        <main class="bg-slate-200 w-screen">
+        <main class="bg-slate-200 flex flex-col p-15 w-screen">
+            <h1>Dashboard</h1>
+            <div class="flex flex-row pt-5 pb-5 gap-5 flex-1">
+                <div class="bg-gray-50 flex-1"></div>
+                <div class="bg-gray-50 flex-1"></div>
+                <div class="bg-gray-50 flex-1"></div>
+            </div>
+            <div class="flex flex-row pt-5 pb-5 gap-5 flex-1">
+                <div class="bg-gray-50 flex-1"></div>
+                <div class="bg-gray-50 flex-1"></div>
+            </div>
+            <div class="flex flex-row pt-5 pb-5 flex-1">
+                <div class="bg-gray-50 flex-1"></div>
+            </div>
+            <div class="flex flex-row pt-5 pb-5 flex-1">
+                <div class="bg-gray-50 flex-1"></div>
+            </div>
         </main>
     </body>
 </html>
