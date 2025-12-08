@@ -1,0 +1,22 @@
+{
+  "name": "groupproject-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pannnomaly/GroupProject-6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pannnomaly/GroupProject-6/issues"
+  },
+  "homepage": "https://github.com/Pannnomaly/GroupProject-6#readme"
+}
