@@ -7,7 +7,6 @@
         <title>Admin Dashboard</title>
     </head>
     <body class="flex flex-row h-screen overflow-hidden">
-        <!-- md:block to show aside-tag when medium screen or higher-->
         <aside id="sidebar" class="bg-gray-800 text-white top-0 left-0 h-screen">
             <div class="flex flex-col h-full">
 
@@ -50,6 +49,8 @@
             <!-- overflow-y-auto add scrolling bar y-axis only to the dashboard -->
             <div id="dashboard" class="flex flex-col flex-1 pl-4 overflow-y-auto">
                 <h1 class="text-3xl font-bold mt-4 mb-4">Dashboard</h1>
+                <!-- w-[calc(33.33%-1rem)] to divide the width to 3 children equally (-1rem cuz we add gap-4 it's not included in the w-full) -->
+                <!-- what md:w-[] does is,  if your screen is more than w-[768px] (...large than mobile phone screen)  it will do something... in this case it will set your div with size to 33.33% of parent -1rem -->
                 <div id="dashB-1" class="flex flex-row flex-wrap mb-4 gap-4">
                     <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(33.33%-1rem)] flex justify-between">
                         <div>
@@ -78,9 +79,23 @@
                             <img class="size-full" src="./images/round-log-out.svg" alt="">
                         </div>
                     </div>
-
                 </div>
+
+                <div id="dashB-4" class="mb-4 mr-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full flex flex-col gap-4">
+                        <p>Quick Actions</p>
+                        <div class="flex flex-row justify-between items-end">
+                            <div class="flex flex-row gap-5">
+                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">New Booking</button>
+                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">Room Status</button>
+                            </div>
+                            <button id="add-new-option" class="bg-slate-300 p-2 rounded-lg cursor-pointer text-xl font-bold">+</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="dashB-2" class="flex flex-row flex-wrap mb-4 gap-4">
+                    <!-- Using md:w-[calc(50%-1rem) cuz we have 2 children to display -->
                     <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-[calc(50%-1rem)]">
                         <div class="flex justify-between">
                             <p>Recent Activities</p>
@@ -122,22 +137,11 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="dashB-3" class="mb-4 mr-4">
                     <div class="bg-white p-4 rounded-lg shadow-md w-full flex flex-col gap-4">
                         <p>Graph Revenue</p>
                         <img src="./images/revenue_graph.png" alt="">
-                    </div>
-                </div>
-                <div id="dashB-4" class="mb-4 mr-4">
-                    <div class="bg-white p-4 rounded-lg shadow-md w-full flex flex-col gap-4">
-                        <p>Quick Actions</p>
-                        <div class="flex flex-row justify-between items-end">
-                            <div class="flex flex-row gap-5">
-                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">New Booking</button>
-                                <button class="bg-slate-300 p-5 rounded-lg cursor-pointer">Room Status</button>
-                            </div>
-                            <button id="add-new-option" class="bg-slate-300 p-2 rounded-lg cursor-pointer text-xl font-bold">+</button>
-                        </div>
                     </div>
                 </div>
             </div>
