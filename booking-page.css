@@ -1,0 +1,475 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    padding-bottom: 90px;
+}
+
+/* Header styles */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button, .next-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover, .next-button:hover {
+    background-color: #f5f5f5;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.secure-booking {
+    font-size: 14px;
+    color: #666;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.step {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.step.active {
+    background-color: #333;
+    color: white;
+}
+
+/* Main content layout */
+.booking-container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 20px 40px;
+}
+
+.booking-header {
+    text-align: center;
+}
+
+.booking-container {
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .booking-header {
+        margin: 3rem 0;
+    }
+
+    .booking-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 1024px) {
+    .booking-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.back-button-container {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 1rem;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.back-button-container .btn {
+    pointer-events: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .back-button-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .booking-container {
+        padding: 2rem 2rem;
+    }
+}
+
+.form-section {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.section-header h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.section-content {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    margin-right: 0.75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-outline {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.btn-outline:hover {
+    background-color: #f9fafb;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.summary-divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 1rem 0;
+}
+
+.hotel-info {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hotel-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.hotel-address {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.booking-dates {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #1f2937;
+    font-size: 0.9375rem;
+}
+
+.nights {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.date-range {
+    color: #4b5563;
+}
+
+.room-type {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #9E7A70; /* Same as continue button */
+    color: white; /* Make text white for better contrast */
+}
+
+.room-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.room-name {
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.room-price {
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: whitesmoke;
+    font-size: 0.875rem;
+}
+
+.price-summary {
+    margin-top: 1.5rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+    font-size: 0.9375rem;
+}
+
+.price-row.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 1.125rem;
+}
+
+
+@media (max-width: 480px) {
+    .hotel-name {
+        font-size: 1rem;
+    }
+    
+    .booking-dates,
+    .room-info {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .price-row {
+        font-size: 0.875rem;
+    }
+    
+    .price-row.total {
+        font-size: 1rem;
+    }
+}
+
+.booking-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .booking-layout {
+        flex-direction: row;
+    }
+
+    .main-content {
+        flex: 2;
+    }
+
+    .sidebar {
+        flex: 1;
+        max-width: 28rem;
+    }
+}
+
+.continue-container {
+    width: 100%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continue-button {
+    background-color: #9E7A70;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.continue-button:hover {
+    background-color: #9E7A70;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .continue-button {
+        width: 100%;
+        padding: 12px;
+    }
+}

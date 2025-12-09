@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
+
+        --background-color-mainTop: #D9D9D9;
+        --background-color-mainBottom: #F5F5F5;
+        --background-color-nav: #E8EAEC;
+        --background-color-inner: #FFF;
+        --background-color-button: #D9D9D9;
+        --font-color-primary: #111;
+
+        --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+      }
+    </style>
+</head>
+<body class="flex flex-row font-sans">
+    <aside id="sidebar" class="h-screen bg-[var(--background-color-nav)] text-[var(--font-color-primary)]">
+        <div class="flex flex-col h-full">
+            <div id="header" class="flex items-center justify-center p-4 border-b border-gray-700">
+                <span class="text-xl font-bold tracking-wider uppercase">Hotel Management</span>
+            </div>
+                
+            <!-- Use flex-grow to allow menu-id to grow to fill any available space push the header-id and copyright-id away as much as possible -->
+            <nav id="menu" class="flex flex-col flex-grow p-4 gap-2">
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
+                    <span>Room Lists</span>
+                </a>
+                <a href="#" class="space-x-3 p-2 rounded-lg text-[var(--font-color-primary)] hover:bg-[#D9D9D9] hover:font-medium">
+                    <span>Booking Page</span>
+                </a>
+            </nav>
+
+            <div id="adminProfile" class="p-4 border-t border-gray-700 hover:bg-[#D9D9D9] flex justify-center items-center gap-x-3 cursor-pointer">
+                <div>
+                    <a href="#"><img src="images/user-circle.svg" alt="admin logo" width="35px" height="35px"></a>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div>
+                        <a href="#"><p class="text-base text-[var(--font-color-primary)]">Admin Pann</p></a>
+                    </div>
+                    <div>
+                        <p class="text-sm text-[var(--font-color-primary)]">pann@hotel.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="copyright" class="p-4 border-t border-gray-700">
+                <p class="text-sm text-[var(--font-color-primary)] text-center">© 2025 MonkeyDB</p>
+            </div>
+        </div>
+    </aside>
+    <main class="w-screen flex flex-col justify-center items-center">
+        <div class="w-[95%] flex justify-between items-center bg-[var(--background-color-mainTop)] text-[var(--font-color-primary)] p-3 rounded-t-md">
+            <div><h2 class="text-4xl font-bold">Profile</h2></div>
+            <div class="flex justify-center items-center hover:bg-[#B8B8B8] rounded-full object-cover aspect-square w-9"><a href="#"><img src="images/gear-settings.svg" alt="gear logo" width="35px" height="35px"></a></div>
+        </div>
+        <div class="w-[95%] flex justify-center bg-[var(--background-color-mainBottom)] rounded-b-md">
+            <div class="w-full px-3 flex flex-col justify-center items-center">
+                <div class="w-[90%] m-15 bg-[var(--background-color-inner)] rounded-md">
+                    <div class="w-full mt-5">
+                        <h3 class="text-2xl font-semibold ml-5">Profile Card</h3>
+                    </div>
+                    <div class="w-full flex flex-col items-center mt-5">
+                        <div><img src="images/users-portrait.jpg" alt="admin portrait" width="150px" height="150px" class="rounded-full object-cover aspect-square shadow-[var(--box-shadow)]"></div>
+                        <div class="w-full flex flex-col items-center mt-3">
+                            <div><p class="text-xl font-semibold">Admin Pann</p></div>
+                            <div><p class="text-lg">Admin</p></div>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col items-center mt-5">
+                        <div class="w-full flex flex-col ml-10">
+                            <div><p class="text-xl font-semibold">Position</p></div>
+                            <div><p class="text-lg">Admin</p></div>
+                        </div>
+                        <div class="w-full flex flex-col mt-3 ml-10">
+                            <div><p class="text-xl font-semibold">Phone</p></div>
+                            <div><p class="text-lg">084-444-4444</p></div>
+                        </div>
+                        <div class="w-full flex flex-col mt-3 mb-5 ml-10">
+                            <div><p class="text-xl font-semibold">Check In-Out</p></div>
+                            <div><p class="text-lg">No Data</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-3 flex flex-col justify-center items-center">
+                <div class="w-[90%] h-full m-15 bg-[var(--background-color-inner)] flex flex-col justify-between rounded-md">
+                    <div>
+                        <div class="w-full mt-5">
+                            <p class="text-2xl font-semibold ml-5">Additional Information</p>
+                        </div>
+                        <div class="w-full mt-5 ml-5">
+                            <div><p class="text-xl font-semibold">users.Id</p></div>
+                            <div><p class="text-lg">1</p></div>
+                        </div>
+                        <div class="w-full mt-5 ml-5">
+                            <div><p class="text-xl font-semibold">createdAt</p></div>
+                            <div><p class="text-lg">2023-09-14 00:00:00</p></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mb-5 mr-5">
+                        <button class="px-6 py-4 bg-[var(--background-color-button)] hover:bg-[#C4C4C4] rounded-xl cursor-pointer">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </body>
+</html>
