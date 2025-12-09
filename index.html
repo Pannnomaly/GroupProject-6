@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Landing Page</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CUSTOM FONT CLASS -->
+    <style>
+        body {
+            font-family: 'IM Fell Great Primer', serif;
+
+            @theme {
+                --font-sans: "Poppins", sans-serif;
+                --font-inter: "Inter", sans-serif;
+
+                --background-color-nav: #D9D9D9;
+                --background-color-footer: #635F58;
+                --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+                --font-color-primary: #111;
+                --font-color-secondary: #808080;
+
+                --nav-height: 64px;
+                --footer-height: 160px
+            }
+        }
+    </style>
+</head>
+
+<body class="text-[#333] bg-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header
+        class="fixed top-0 w-full z-50 px-10 py-6 flex justify-between items-center text-white mix-blend-difference">
+        <button id="btnMenu" class="text-2xl">&#9776;</button>
+        <div class="tracking-[0.2em] text-xl">LOGO</div>
+
+        <button
+            class="px-8 py-2 border border- text-white uppercase tracking-wide hover:bg-white hover:text-amber-900 transition"
+            style="font-family: 'IM Fell Great Primer', serif;">
+            Book Now
+
+        </button>
+    </header>
+
+    <!-- <img src="images/BGLDP.jpg" class="w-full h-full"> -->
+
+    <!-- ================= HERO ================= -->
+    <section class="relative h-screen w-full">
+
+        <img src="images/BGLDP.jpg" class="w-full h-full">
+
+        <div class="absolute inset-0"></div>
+
+        <!-- TEXT -->
+        <div class="absolute left-16 top-2/3 text-white tracking-[0.1em] leading-relaxed">
+            <p class="text-[140px] leading-none mb-4 opacity-30">S</p>
+            <p class="text-lg opacity-70">
+                STAY SIMPLE. <br>
+                STAY COMFORTABLE. <br>
+                STAY IN THE HEART OF THE CITY.
+            </p>
+        </div>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="px-[8rem] py-[6rem]">
+
+            <div class="flex justify-between items-start">
+
+                <div class="text-center">
+                    <p class="text-xl tracking-wider mb-8  text-[#958574]">MonkeyDB UIIA Hotel Bangkok</p>
+
+                    <button
+                        class="border border-[#dfdfdf] px-8 py-2 text-xs tracking-wider hover:bg-[#bbaf90] hover:text-white transition">
+                        HOTEL DETAILS
+                    </button>
+                </div>
+
+                <div class="text-right text-sm tracking-wider leading-loose text-[#958574]">
+                    <p class="text-lg tracking-[0.2em] mb-3 border-l-4 text-[#958574]">LOGO</p>
+                    <p>EMAIL contact@gmail.com</p> <br>
+                    <p>PHONE 084-444-4444</p> <br>
+                    <p>BANGKOK, THAILAND</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKYLINE ================= -->
+        <section class="px-[8rem] py-[6rem]">
+            <div class="grid grid-cols-2 gap-20">
+
+                <img src="images/window.jpg" class="shadow-(color:#958574) w-full h-full ">
+                <!-- <div class="bg-gray-300 h-[550px]"></div> -->
+
+                <!-- TEXT -->
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-[26px] mb-8 tracking-wide border-b-2">Skyline Comfort</h2>
+
+                    <p class="text-sm leading-relaxed mb-10 tracking-wide text-[#958574]"
+                        style="font-family: 'Noto Sans Thai', sans-serif;">
+                        หลีกหนีความวุ่นวาย<br>
+                        แล้วปล่อยให้วิวเมืองโอบกอดคุณ<br>
+                        แสงแดดอ่อนยามเช้าและท้องฟ้ายามค่ำช่วยเติมเต็มบรรยากาศ<br>
+                        เป็นพื้นที่พักใจที่เรียบง่าย<br>
+                        แต่เต็มไปด้วยเสน่ห์ของเมือง
+                    </p>
+
+                    <button
+                        class="border border-[#dfdfdf] px-8 py-2 text-xs tracking-wider hover:bg-[#958574] hover:text-white transition">
+                        EXPLORE HIGHLIGHTS
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= RESTAURANT ================= -->
+        <section class="bg-[#beb1a1] px-[8rem] py-[6rem]">
+            <div class="flex items-center justify-between gap-10">
+
+                <!-- TEXT -->
+                <div class="flex flex-col justify-center w-1/2">
+                    <h2 class="text-[26px] text-[#444040] mb-10 tracking-wider border-b-2">Restaurants</h2>
+
+                    <p class="text-sm leading-relaxed mb-10 tracking-wide text-white">
+                        รสชาติที่แท้ ที่เชื่อมโยงกับวัฒนธรรมของเรา
+                        สุดยอดรสชาติอาหารที่เราคัดสรรให้คุณ
+                        พร้อมเมนูที่คิดขึ้นจากแรงบันดาลใจจริง
+                        รอให้คุณสัมผัสด้วยตัวเอง
+                    </p>
+
+                    <button
+                        class="bg-white px-10 py-2 text-xs text- tracking-wider hover:bg-amber-900 hover:text-white transition">
+                        SHOW ALL
+                    </button>
+                </div>
+
+
+                <!-- IMAGE (วางไว้ขวาสุด) w-[60%] -->
+                <div class="w-[60%]">
+                    <img src="images/tomyum.png" alt="Restaurant" class=" h-full object-cover w-full">
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-6 py-10">
+
+            <div class="w-full max-w-7xl mx-auto py-12">
+
+
+                <div class="flex justify-evenly gap-10 mb-12">
+                    <button
+                        class="px-20 py-3 text-[#5f5b54] shadow-xl border-gray-200 text-xl hover:bg-amber-900 hover:text-white transition">Room
+                        Type</button>
+                    <button
+                        class="px-10 py-3 text-white bg-amber-900 shadow-xl text-xl hover:bg-white hover:text-[#696459] transition">Local
+                        recommendations</button>
+                    <button
+                        class="px-20 py-3 text-[#5f5b54] shadow-xl border-gray-200 text-xl hover:bg-amber-900 hover:text-white transition">Facilities</button>
+                </div>
+
+                <!-- Images Row -->
+                <div class="grid grid-cols-3 gap-6 mb-10">
+                    <img src="images/fclt.jpg" class="w-full h-56 object-cover">
+                    <img src="images/localr.jpg" class="w-full h-56 object-cover">
+                    <img src="images/rt.jpg" class="w-full h-56 object-cover">
+                </div>
+
+                <!-- Content Row -->
+                <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-8">
+
+                    <!-- Column 1 -->
+                    <div class="text-sm leading-relaxed text-gray-800 space-y-4">
+                        <p>
+                            <span class="font-semibold">Single Room</span> — A cozy room with one bed, perfect for solo
+                            travelers who want privacy and comfort.
+                        </p>
+                        <p>
+                            <span class="font-semibold">Double / Twin Room</span> — Ideal for two guests, available with
+                            either one double bed or two single beds.
+                        </p>
+                        <p>
+                            <span class="font-semibold">Family Room</span> — A larger room designed for small groups or
+                            families, with extra space and multiple beds.
+                        </p>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-px bg-[#c9b28c]"></div>
+
+                    <!-- Column 2 -->
+                    <div class="text-sm text-gray-800">
+                        <ul class="list-none pl-5 space-y-2">
+                            <li>Rooftop Bar and cafe</li>
+                            <li>Market</li>
+                            <li>Local restaurants / Street food</li>
+                            <li>Nightlife</li>
+                            <li>Mall</li>
+                        </ul>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-px bg-[#c9b28c]"></div>
+
+                    <!-- Column 3 -->
+                    <div class="text-sm text-gray-800">
+                        <ol class="list-none pl-5 space-y-2">
+                            <li>Internet / Free Wi-Fi access</li>
+                            <li>Continental Breakfast</li>
+                            <li>Coffee, Tea, Snacks all day everyday</li>
+                            <li>Terracing & Activities</li>
+                            <li>Laundry / Drying Facilities</li>
+                            <li>CCTV with 24 Hours Monitor</li>
+                            <li>Electronic Keycard Access</li>
+                        </ol>
+                    </div>
+
+               </div>
+
+        </section>
+
+
+
+        <section>
+
+
+            <div class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-4xl">
+                    <div class="flex space-x-4">
+                        <img src="images/building.jpg" class="h-full w-full object-cover" alt="placeholder Image" />
+
+                        <img src="images/pool.jpg" class="h-full w-full object-cover" alt="placeholder Image" />
+
+                        <img src="images/lobby.jpg" class="h-full w-full object-cover" alt="placeholder Image" />
+
+
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button class="bg-gray-300 rounded-full h-4 w-4 mx-1"></button>
+                        <button class="bg-gray-300 rounded-full h-4 w-4 mx-1"></button>
+                        <button class="bg-gray-300 rounded-full h-4 w-4 mx-1"></button>
+                    </div>
+                    <!-- <div class="flex justify-between items-center mt-4 px-4">
+                <button class="bg-slate-300 rounded-full p-1">Prev </button>
+                  <button class="bg-slate-300 rounded-full p-1">Next </button>
+            </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= JS ================= -->
+        <script>
+            const btn = document.getElementById("btnMenu");
+            btn.addEventListener("click", () => {
+                alert("menu placeholder");
+            });
+        </script>
+
+        <!-- ================= footer ================= -->
+        <footer
+            class="bg-[var(--background-color-footer)] h-[var(--footer-height)] shadow-[var(--box-shadow)] flex flex-col items-center justify-between text-[var(--font-color-primary)] font-medium">
+            <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
+                <div class="my-auto">
+                    <div><a href="#"><img class="w-18" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div>
+                        <p class="font-bold">SITE MAP</p>
+                    </div>
+                    <div class="pt-3 gap-1.25 flex flex-col">
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>User</p>
+                            </a></div>
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>Availability</p>
+                            </a></div>
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>Contact Us</p>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div>
+                        <p class="font-bold">SOCIALS</p>
+                    </div>
+                    <div class="pt-3 gap-1.25 flex flex-col">
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>Facebook</p>
+                            </a></div>
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>Instagram</p>
+                            </a></div>
+                        <div class="hover:bg-[#54504A] rounded-lg"><a href="#">
+                                <p>Twitter</p>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between h-full">
+                    <div class="flex flex-col w-2/3">
+                        <p class="font-bold">HEAD OFFICE</p>
+                        <div class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?
+                        </div>
+                    </div>
+                    <div class="flex flex-col pb-5">
+                        <div>NEWS LETTER</div>
+                        <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3 shadow-[var(--box-shadow)]"><input type="email"
+                                name="" id="" placeholder="Enter your email address" class="w-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
+                <div>contact@gmail.com</div>
+                <div>084-444-4444</div>
+                <div>© MonkeyDB Hostel All rights reserved</div>
+            </div>
+        </footer>
+
+</body>
+
+</html>

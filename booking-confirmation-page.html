@@ -15,100 +15,97 @@
         --font-sans: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
 
-        --background-color-nav: #EFF0F2;
-        --background-color-footer: #635F58;
-        --background-color-mainLeft: #D9D9D9;
-        --background-color-mainRight: #f5f5f5;
-        --background-color-button: #E8EAEC;
         --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
-        --font-color-primary: #111;
-        --font-color-secondary: #808080;
-
-        --nav-height: 64px;
-        --footer-height: 256px
       }
     </style>
 </head>
 <body>
-    <div class="confirmation-card">
-        <!-- Header -->
-        <div class="header">
-            <h1>Reservation Confirmation</h1>
-            <p>Your Confirmation Number is <span class="confirmation-number">ABC-123-4567</span></p>
+    <div class="flex flex-col gap-y-2">
+        <div>
+            <button>
+                <img src="images/back-arrow-direction.svg" alt="back arrow logo" width="40" height="40" class="cursor-pointer">
+            </button>
         </div>
+        <div class="confirmation-card">
+            <!-- Header -->
+            <div class="header">
+                <h1>Reservation Confirmation</h1>
+                <p>Your Confirmation Number is <span class="confirmation-number">ABC-123-4567</span></p>
+            </div>
 
-        <!-- Hotel Room Image -->
-        <div class="hotel-image">
-            <img src="images/pic/1bed.jpg" alt="Hotel Room" class="center-image">
-        </div>
+            <!-- Hotel Room Image -->
+            <div class="hotel-image">
+                <img src="images/pic/1bed.jpg" alt="Hotel Room" class="center-image">
+            </div>
 
-        <!-- Confirmation Details -->
-        <div class="details-section">
-            <!-- Row 1: Name, Check in, Check out -->
-            <div class="detail-row single-column">
-                <div class="detail-item">
-                    <label>Name:</label>
-                    <p>Tata Mcrae</p>
+            <!-- Confirmation Details -->
+            <div class="details-section">
+                <!-- Row 1: Name, Check in, Check out -->
+                <div class="detail-row single-column">
+                    <div class="detail-item">
+                        <label>Name:</label>
+                        <p>Tata Mcrae</p>
+                    </div>
+                    <div class="detail-item single-column">
+                        <label>Check in:</label>
+                        <p>25-Dec-2025</p>
+                    </div>
+                    <div class="detail-item single-column">
+                        <label>Check out:</label>
+                        <p>1-Jan-2026</p>
+                    </div>
                 </div>
-                <div class="detail-item single-column">
-                    <label>Check in:</label>
-                    <p>25-Dec-2025</p>
+
+                <!-- Row 2: Room Type, No. of Guest, No. of nights -->
+                <div class="detail-row">
+                    <div class="detail-item single-column" >
+                        <label>Room type:</label>
+                        <p>Double Room</p>
+                    </div>
+                    <br>
+                    <div class="detail-item">
+                        <label>No. of Guest:</label>
+                        <p>2 Adults</p>
+                    </div>
+                    <br>
+                    <div class="detail-item">
+                        <label>No. of nights:</label>
+                        <p>6 nights</p>
+                    </div>
                 </div>
-                <div class="detail-item single-column">
-                    <label>Check out:</label>
-                    <p>1-Jan-2026</p>
+
+                <!-- Row 3: Amount -->
+                <div class="detail-row single-column">
+                    <div class="detail-item">
+                        <label>Amount:</label>
+                        <p>7,000 THB (includes taxes and service charges)</p>
+                    </div>
+                </div>
+
+                <!-- Row 4: Special Request -->
+                <div class="detail-row single-column">
+                    <div class="detail-item special-request">
+                        <label>Special Request:</label>
+                        <p>High floor room preferred with ocean view.
+                        <br>Request for extra pillows and non-smoking room.</br>
+                            Early check-in if available.
+                            Celebrating anniversary - room decoration would be appreciated.</p>
+                    </div>
+                </div>
+
+                <!-- Row 5: Hotel Address -->
+                <div class="detail-row single-column">
+                    <div class="detail-item">
+                        <label>Hotel Address:</label>
+                        <p>MonkeyDB Hotel @BKK, 123 Rama1 Road, Pathumwan, Bangkok, 10330 Thailand</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Row 2: Room Type, No. of Guest, No. of nights -->
-            <div class="detail-row">
-                <div class="detail-item single-column" >
-                    <label>Room type:</label>
-                    <p>Double Room</p>
-                </div>
-                <br>
-                <div class="detail-item">
-                    <label>No. of Guest:</label>
-                    <p>2 Adults</p>
-                </div>
-                <br>
-                <div class="detail-item">
-                    <label>No. of nights:</label>
-                    <p>6 nights</p>
-                </div>
+            <!-- Footer -->
+            <div class="footer">
+                <p>For reservations: MonkeyDB Hotel @BKK | Email: reservations@monkeydb.com | Phone: +66 94 389 7892</p>
             </div>
-
-            <!-- Row 3: Amount -->
-            <div class="detail-row single-column">
-                <div class="detail-item">
-                    <label>Amount:</label>
-                    <p>7,000 THB (includes taxes and service charges)</p>
-                </div>
-            </div>
-
-            <!-- Row 4: Special Request -->
-            <div class="detail-row single-column">
-                <div class="detail-item special-request">
-                    <label>Special Request:</label>
-                    <p>High floor room preferred with ocean view.
-                    <br>Request for extra pillows and non-smoking room.</br>
-                        Early check-in if available.
-                        Celebrating anniversary - room decoration would be appreciated.</p>
-                </div>
-            </div>
-
-            <!-- Row 5: Hotel Address -->
-            <div class="detail-row single-column">
-                <div class="detail-item">
-                    <label>Hotel Address:</label>
-                    <p>MonkeyDB Hotel @BKK, 123 Rama1 Road, Pathumwan, Bangkok, 10330 Thailand</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>For reservations: MonkeyDB Hotel @BKK | Email: reservations@monkeydb.com | Phone: +66 94 389 7892</p>
         </div>
     </div>
 </body>
