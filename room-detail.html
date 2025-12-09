@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>monkyDB Hostel</title>
+  </head>
+  <body class="bg-[#f6f6f6] text-gray-800">
+    <!-- NAVBAR -->
+    <nav class="w-full bg-white shadow-sm py-4 px-8 flex items-center justify-between">
+      <div class="text-2xl font-bold">LOGO</div>
+      <ul class="hidden md:flex space-x-10 text-sm font-medium">
+        <li><a href="#" class="hover:underline">Find a Property</a></li>
+        <li><a href="#" class="hover:underline">Share Stays</a></li>
+        <li><a href="#" class="hover:underline">Norcal Guides</a></li>
+        <li><a href="#" class="hover:underline">Download Mobile App</a></li>
+      </ul>
+      <button class="border px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100">
+        Sign in / Register
+      </button>
+    </nav>
+
+    <!-- Sign In and Register Bar -->
+    <!-- Mobile -->
+    <section class="md:hidden flex justify-center w-full mt-10 px-4">
+      <div class="bg-white shadow-lg rounded-2xl flex flex-col gap-4 px-4 py-5 w-full max-w-md">
+        <!-- Guests -->
+        <div class="relative">
+          <button class="bg-red-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+            2 guests
+          </button>
+
+          <!-- show/hide guests -->
+          <div class="absolute bg-white shadow-lg rounded-xl p-4 text-sm mt-2 hidden">
+            <p>Adults 0</p>
+            <p>Child 0</p>
+          </div>
+        </div>
+
+        <!-- Check In / Check Out -->
+        <div class="w-full">
+          <button
+            class="border border-black bg-gray-200 w-full px-4 py-2 rounded-xl hover:bg-gray-100 font-medium"
+          >
+            Check In || Check Out
+          </button>
+        </div>
+
+        <div class="flex justify-between items-center w-full">
+          <button class="px-4 py-3 rounded-xl hover:bg-gray-100 font-medium w-full text-left">
+            Sign in / Register
+          </button>
+          <img
+            src="./images/room-detail/person.svg"
+            height="32px"
+            width="32px"
+            alt="user-profile"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign In and Register Bar -->
+    <!-- Desktop -->
+    <section class="hidden md:flex justify-center w-full mt-10 px-4">
+      <div
+        class="bg-white shadow-lg rounded-full flex items-center gap-4 px-6 py-3 w-full max-w-4xl"
+      >
+        <!-- Guests -->
+        <div class="relative">
+          <button class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+            2 guests
+          </button>
+
+          <!-- show/hide guests -->
+          <div class="absolute bg-white shadow-lg rounded-xl p-4 text-sm mt-2 hidden">
+            <p>Adults 0</p>
+            <p>Child 0</p>
+          </div>
+        </div>
+
+        <div class="flex flex-1 justify-center items-center gap-4">
+          <button
+            class="border border-black bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-100 font-medium"
+          >
+            Check In || Check Out
+          </button>
+        </div>
+
+        <div class="flex justify-between">
+          <button class="ml-auto px-4 py-2 rounded-full hover:bg-gray-100 font-medium">
+            Sign in / Register
+          </button>
+          <img
+            src="./images/room-detail/person.svg"
+            height="32px"
+            width="32px"
+            alt="user-profile"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE SLIDER Swiper JS-->
+    <section class="w-full flex justify-center mt-10">
+      <div class="swiper mySwiper w-full max-w-4xl">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/one-bed/227707266.png"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide flex justify-center">
+            <img
+              src="./images/room-detail/two-bed/138761299.png"
+              class="w-[80%] h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next text-gray-600"></div>
+        <div class="swiper-button-prev text-gray-600"></div>
+      </div>
+    </section>
+
+    <!-- ROOMS GRID -->
+    <section
+      class="w-full max-w-6xl mx-auto mt-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+    >
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/family/olexandr-ignatov-w72a24brINI-unsplash_1.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/family/point3d-commercial-imaging-ltd-_Swg04CP0bU-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/two-bed/138761299.png"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/two-bed/139042512.png"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/two-bed/erin-brundage-w8mrCVlTPhw-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/two-bed/pexels-pixabay-276671.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/two-bed/yizack-rangel-O_XmoLGBMrw-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/227707266.png"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/alex-tyson-CMKobKs3mn8-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/christina-radevich-kQjEq2bNFS0-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/pexels-andrew-3201763.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+
+      <div class="bg-white border rounded-xl p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
+          Booking
+        </button>
+      </div>
+    </section>
+
+    <!-- Modal-Detail -->
+    <section
+      id="my-modal"
+      class="hidden fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[55%] z-50 max-w-4xl overflow-y-auto max-h-[90vh] bg-[#ede8dc] mt-10 p-8 border border-black border-opacity-30 rounded-xl shadow"
+    >
+      <button
+        id="close-modal"
+        class="absolute top-4 right-4 px-3 py-1 bg-black text-white rounded-full"
+      >
+        X
+      </button>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img
+            id="modal-image"
+            src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
+            class="rounded-lg shadow cursor-pointer"
+          />
+        </div>
+        <div>
+          <h2 class="font-semibold text-lg">Fully Furnished Apartment</h2>
+          <p class="text-sm text-gray-600 mt-2">Check in: 12 Mar 2024</p>
+          <p class="text-sm text-gray-600">Duration: Long (2 - 5 Years)</p>
+          <p class="text-sm text-gray-600">Guests: 4 Adults</p>
+          <p class="text-sm mt-2 font-bold">$ 1000 USD</p>
+          <button class="mt-4 border px-4 py-2 rounded-full">Reserve</button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="Address"
+        />
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="About"
+        />
+
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="Location"
+        />
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="Location"
+        />
+
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="Work"
+        />
+        <input
+          class="p-3 rounded border w-full focus:ring-2 focus:ring-black focus:outline-none"
+          placeholder="Work"
+        />
+      </div>
+
+      <h2 class="text-xl font-semibold mt-12">Step 2</h2>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Payment Method -->
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h3 class="font-medium mb-4">Select a payment method</h3>
+          <div class="space-y-3">
+            <div class="border p-3 rounded flex items-center gap-3 cursor-pointer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
+                class="w-10"
+              />
+              <span>VISA</span>
+            </div>
+            <div class="border p-3 rounded flex items-center gap-3 cursor-pointer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                class="w-10"
+              />
+              <span>Mastercard</span>
+            </div>
+            <div class="border p-3 rounded flex items-center gap-3 cursor-pointer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c5/PromptPay-logo.png"
+                class="w-10"
+              />
+              <span>PromptPay</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div>
+          <h3 class="font-medium mb-4">Payment Details</h3>
+          <input
+            class="w-full border p-3 rounded mb-3 focus:ring-2 focus:ring-black focus:outline-none"
+            placeholder="Enter Name on Card"
+          />
+          <input
+            class="w-full border p-3 rounded mb-3 focus:ring-2 focus:ring-black focus:outline-none"
+            placeholder="Card Number"
+          />
+
+          <div class="flex gap-4">
+            <input
+              class="w-1/2 border p-3 rounded focus:ring-2 focus:ring-black focus:outline-none"
+              placeholder="Expire Date"
+            />
+            <input
+              class="w-1/2 border p-3 rounded focus:ring-2 focus:ring-black focus:outline-none"
+              placeholder="CVV"
+            />
+          </div>
+
+          <div class="flex justify-between mt-6">
+            <button class="px-6 py-2 border rounded-full">Back</button>
+            <button class="px-6 py-2 bg-black hover:bg-gray-700 text-white rounded-full">
+              Confirm payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#4c453f] text-white mt-20 py-16 px-10">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4">LOGO</h3>
+          <p class="text-sm">contact@agency</p>
+          <p class="text-sm mt-2">123-456-7890</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3">Sitemap</h4>
+          <ul class="text-sm space-y-2">
+            <li>Hotels</li>
+            <li>Rooms</li>
+            <li>Members</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3">Socials</h4>
+          <ul class="text-sm space-y-2">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3">Newsletter</h4>
+          <input
+            type="text"
+            placeholder="Enter your email"
+            class="px-3 py-2 text-black rounded-lg w-full"
+          />
+          <button class="mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // Swiper JS
+      const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 2.5,
+          slideShadows: false,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // Modal
+      const openModalButtons = document.querySelectorAll(".open-modal");
+      const myModal = document.getElementById("my-modal");
+      const modalBackdrop = document.getElementById("modal-backdrop");
+      const closeModal = document.getElementById("close-modal");
+      const modalImage = document.getElementById("modal-image");
+
+      // เปิด modal จากทุกรูปภาพ
+      openModalButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          modalImage.src = btn.src;
+          myModal.classList.remove("hidden");
+          modalBackdrop.classList.remove("hidden");
+        });
+      });
+
+      // ปิด modal เมื่อคลิกปุ่ม X
+      closeModal.addEventListener("click", () => {
+        myModal.classList.add("hidden");
+        modalBackdrop.classList.add("hidden");
+      });
+
+      // ปิด modal เมื่อคลิกฉากหลัง
+      modalBackdrop.addEventListener("click", () => {
+        myModal.classList.add("hidden");
+        modalBackdrop.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
