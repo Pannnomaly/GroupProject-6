@@ -1,146 +1,267 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile Page</title>
-    <link rel="stylesheet" href="style.css">
-     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile Page</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
         --font-sans: "Poppins", sans-serif;
         --font-inter: "Inter", sans-serif;
 
-        --background-color-nav: #EFF0F2;
-        --background-color-footer: #635F58;
-        --background-color-mainLeft: #D9D9D9;
+        --background-color-nav: #eff0f2;
+        --background-color-footer: #635f58;
+        --background-color-mainLeft: #d9d9d9;
         --background-color-mainRight: #f5f5f5;
-        --background-color-button: #E8EAEC;
+        --background-color-button: #e8eaec;
         --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
         --font-color-primary: #111;
         --font-color-secondary: #808080;
 
         --nav-height: 64px;
-        --footer-height: 256px
+        --footer-height: 256px;
       }
     </style>
 </head>
+
 <body class="font-sans h-screen">
-    <header class="h-[var(--nav-height)] bg-[var(--background-color-nav)] shadow-[var(--box-shadow)] text-[var(--font-color-primary)] font-medium">
-        <nav class="h-[var(--nav-height)] flex items-center justify-between no-underline text-[22px]">
-            <div class="flex items-center pl-10">
-                <div><a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
-                <div><a href="#"><p class="font-bold text-center">MonkeyDB</p></a></div>
-                <div><a href="#"><p class="text-[var(--font-color-secondary)] text-center">Hostel</p></a></div>
-            </div>
-            <div class="flex items-center gap-x-4 pr-10 h-full">
-                <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"><a href="#"><p class="text-center">User</p></a></div>
-                <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"><a href="#"><p class="text-center">Availability</p></a></div>
-                <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"><a href="#"><p class="text-center">Contact Us</p></a></div>
-            </div>
-        </nav>
-    </header>
+  <header
+    class="h-[var(--nav-height)] bg-[var(--background-color-nav)] shadow-[var(--box-shadow)] text-[var(--font-color-primary)] font-medium">
+    <nav class="h-[var(--nav-height)] flex items-center justify-between no-underline text-[22px]">
+      <div class="flex items-center pl-10">
+        <div>
+          <a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo" /></a>
+        </div>
+        <div>
+          <a href="#">
+            <p class="font-bold text-center">MonkeyDB</p>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <p class="text-[var(--font-color-secondary)] text-center">
+              Hostel
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center gap-x-4 pr-10 h-full">
+        <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer">
+          <a href="#">
+            <p class="text-center">User</p>
+          </a>
+        </div>
+        <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer">
+          <a href="#">
+            <p class="text-center">Availability</p>
+          </a>
+        </div>
+        <div class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer">
+          <a href="#">
+            <p class="text-center">Contact Us</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-
-    <main>
-      <div class="h-167.5 w-full flex justify-center">
-        <div class="w-[25%] bg-[var(--background-color-mainLeft)] mt-10 mb-10 gap-10 flex flex-col justify-center items-center">
-          <div class="w-full flex justify-end pr-10">
-            <div class="flex justify-center items-center hover:bg-[#B8B8B8] rounded-full object-cover aspect-square w-9"><a href="#"><img src="images/gear-settings.svg" alt="gear logo" width="30" height="30"></a></div>
+  <main>
+    <div class="h-167.5 w-full flex justify-center">
+      <div
+        class="w-[25%] bg-[var(--background-color-mainLeft)] mt-10 mb-10 gap-10 flex flex-col justify-center items-center">
+        <div class="w-full flex justify-end pr-10">
+          <div class="flex justify-center items-center hover:bg-[#B8B8B8] rounded-full object-cover aspect-square w-9">
+            <a href="#"><img src="images/gear-settings.svg" alt="gear logo" width="30" height="30" /></a>
           </div>
-          <div class="flex flex-col justify-center items-center">
-            <div><img src="images/users-portrait.jpg" alt="User Portrait" width="150" height="150" class="rounded-full object-cover aspect-square shadow-[var(--box-shadow)]"></div>
-            <div class="mt-5"><p class="text-3xl font-bold">Jane Doe</p></div>
-            <div class="mt-10"><p class="text-xl font-semibold">Identity Verification</p></div>
-            <div class="mt-5 w-3/4"><p class="text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat unde expedita recusandae est exercitationem placeat vero at, sint quaerat. </p></div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <div>
+            <img src="images/users-portrait.jpg" alt="User Portrait" width="150" height="150"
+              class="rounded-full object-cover aspect-square shadow-[var(--box-shadow)]" />
           </div>
-        <div class="w-[65%] bg-[var(--background-color-mainRight)] mt-10 mb-10 flex flex-col justify-center items-center">
-          <div class="w-[80%] flex flex-col">
-            <div><p class="text-3xl font-bold">Hello, Jane Doe</p></div>
-            <div><p class="text-xl font-medium mt-5">Joined in 2021</p></div>
-            <div class="mt-3 opacity-50"><hr></div>
+          <div class="mt-5">
+            <p class="text-3xl font-bold">Jane Doe</p>
           </div>
-          <div class=" w-[80%] flex flex-col mt-3">
-            <div class="mb-5"><h3 class="text-xl font-semibold">Booking History</h3></div>
-            <div>
-              <div class="flex items-center gap-x-10 p-3 hover:bg-[#E0E0E0]">
-                <div><img src="images/mock-room-2.jpg" alt="mock room 1" width="200px" height="200px" class="rounded-xl shadow-[var(--box-shadow)]"></div>
-                <div class="flex flex-col gap-y-0.5">
-                  <div><p class="text-lg font-semibold">Fully Furnished Apartment</p></div>
-                  <div><span class="font-semibold">Check in: </span><span>12 Mar 2021</span></div>
-                  <div><span class="font-semibold">Duration: </span><span>Long (2 - 5 Years)</span></div>
-                  <div><span class="font-semibold">Guests: </span><span>4 Adults</span></div>
-                  <div><p class="font-semibold">$ 1000 USD</p></div>
+          <div class="mt-10">
+            <p class="text-xl font-semibold">Identity Verification</p>
+          </div>
+          <div class="mt-5 w-3/4">
+            <p class="text-lg text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eligendi fugiat unde expedita recusandae est exercitationem
+              placeat vero at, sint quaerat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-[65%] bg-[var(--background-color-mainRight)] mt-10 mb-10 flex flex-col justify-center items-center">
+        <div class="w-[80%] flex flex-col">
+          <div>
+            <p class="text-3xl font-bold">Hello, Jane Doe</p>
+          </div>
+          <div>
+            <p class="text-xl font-medium mt-5">Joined in 2021</p>
+          </div>
+          <div class="mt-3 opacity-50">
+            <hr />
+          </div>
+        </div>
+        <div class="w-[80%] flex flex-col mt-3">
+          <div class="mb-5">
+            <h3 class="text-xl font-semibold">Booking History</h3>
+          </div>
+          <div>
+            <div class="flex items-center gap-x-10 p-3 hover:bg-[#E0E0E0]">
+              <div>
+                <img src="images/mock-room-2.jpg" alt="mock room 1" width="200px" height="200px"
+                  class="rounded-xl shadow-[var(--box-shadow)]" />
+              </div>
+              <div class="flex flex-col gap-y-0.5">
+                <div>
+                  <p class="text-lg font-semibold">
+                    Fully Furnished Apartment
+                  </p>
+                </div>
+                <div>
+                  <span class="font-semibold">Check in: </span><span>12 Mar 2021</span>
+                </div>
+                <div>
+                  <span class="font-semibold">Duration: </span><span>Long (2 - 5 Years)</span>
+                </div>
+                <div>
+                  <span class="font-semibold">Guests: </span><span>4 Adults</span>
+                </div>
+                <div>
+                  <p class="font-semibold">$ 1000 USD</p>
                 </div>
               </div>
-              <div class="flex items-center gap-x-10 mt-3 p-3 hover:bg-[#E0E0E0]">
-                <div><img src="images/room-01.jpg" alt="mock room 2" width="200px" height="200px" class="rounded-xl shadow-[var(--box-shadow)]"></div>
-                <div class="flex flex-col gap-y-0.5">
-                  <div><p class="text-lg font-semibold">Furnished Apartment</p></div>
-                  <div><span class="font-semibold">Check in: </span><span>21 Sep 2021</span></div>
-                  <div><span class="font-semibold">Duration: </span><span>Long (4 - 7 Years)</span></div>
-                  <div><span class="font-semibold">Guests: </span><span>2 Adults</span></div>
-                  <div><p class="font-semibold">$ 1500 USD</p></div>
+            </div>
+            <div class="flex items-center gap-x-10 mt-3 p-3 hover:bg-[#E0E0E0]">
+              <div>
+                <img src="images/room-01.jpg" alt="mock room 2" width="200px" height="200px"
+                  class="rounded-xl shadow-[var(--box-shadow)]" />
+              </div>
+              <div class="flex flex-col gap-y-0.5">
+                <div>
+                  <p class="text-lg font-semibold">Furnished Apartment</p>
+                </div>
+                <div>
+                  <span class="font-semibold">Check in: </span><span>21 Sep 2021</span>
+                </div>
+                <div>
+                  <span class="font-semibold">Duration: </span><span>Long (4 - 7 Years)</span>
+                </div>
+                <div>
+                  <span class="font-semibold">Guests: </span><span>2 Adults</span>
+                </div>
+                <div>
+                  <p class="font-semibold">$ 1500 USD</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex gap-x-10 mt-3">
-            <div class="flex justify-center items-center w-8 bg-[var(--background-color-button)] rounded-full object-cover aspect-square shadow-[var(--box-shadow)] hover:bg-[#C5C7C9] cursor-pointer">
-              <button class="cursor-pointer"><img src="images/arrow-forward-navigation.svg" alt="backward" width="25px" height="25px" class="scale-x-[-1]"></button>
-            </div>
-            <div class="flex justify-center items-center w-8 bg-[var(--background-color-button)] rounded-full object-cover aspect-square shadow-[var(--box-shadow)] hover:bg-[#C5C7C9] cursor-pointer">
-              <button class="cursor-pointer"><img src="images/arrow-forward-navigation.svg" alt="backward" width="25px" height="25px"></button>
-            </div>
+        </div>
+        <div class="flex gap-x-10 mt-3">
+          <div
+            class="flex justify-center items-center w-8 bg-[var(--background-color-button)] rounded-full object-cover aspect-square shadow-[var(--box-shadow)] hover:bg-[#C5C7C9] cursor-pointer">
+            <button class="cursor-pointer">
+              <img src="images/arrow-forward-navigation.svg" alt="backward" width="25px" height="25px"
+                class="scale-x-[-1]" />
+            </button>
+          </div>
+          <div
+            class="flex justify-center items-center w-8 bg-[var(--background-color-button)] rounded-full object-cover aspect-square shadow-[var(--box-shadow)] hover:bg-[#C5C7C9] cursor-pointer">
+            <button class="cursor-pointer">
+              <img src="images/arrow-forward-navigation.svg" alt="backward" width="25px" height="25px" />
+            </button>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="bg-[var(--background-color-footer)] h-[var(--footer-height)] shadow-[var(--box-shadow)] flex flex-col items-center justify-between text-[var(--font-color-primary)] font-medium">
-      <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
-        <div class="my-auto">
-          <div><a href="#"><img class="w-18" src="images/ic-logo.svg" alt="Hotel Logo"></a></div>
+  <footer
+    class="bg-[var(--background-color-footer)] h-[var(--footer-height)] shadow-[var(--box-shadow)] flex flex-col items-center justify-between text-[var(--font-color-primary)] font-medium">
+    <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
+      <div class="my-auto">
+        <div>
+          <a href="#"><img class="w-18" src="images/ic-logo.svg" alt="Hotel Logo" /></a>
         </div>
-        <div class="flex flex-col justify-center">
-          <div><p class="font-bold">SITE MAP</p></div>
-          <div class="pt-3 gap-1.25 flex flex-col">
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>User</p></a></div>
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>Availability</p></a></div>
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>Contact Us</p></a></div>
-          </div>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div>
+          <p class="font-bold">SITE MAP</p>
         </div>
-        <div class="flex flex-col justify-center">
-          <div><p class="font-bold">SOCIALS</p></div>
-          <div class="pt-3 gap-1.25 flex flex-col">
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>Facebook</p></a></div>
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>Instagram</p></a></div>
-            <div class="hover:bg-[#54504A] rounded-lg"><a href="#"><p>Twitter</p></a></div>
+        <div class="pt-3 gap-1.25 flex flex-col">
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>User</p>
+            </a>
           </div>
-        </div>
-        <div class="flex flex-col justify-between h-full">
-          <div class="flex flex-col w-2/3">
-            <p class="font-bold">HEAD OFFICE</p>
-            <div class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?</div>
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>Availability</p>
+            </a>
           </div>
-          <div class="flex flex-col pb-5">
-            <div>NEWS LETTER</div>
-            <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3 shadow-[var(--box-shadow)]"><input type="email" name="" id="" placeholder="Enter your email address" class="w-full"></div>
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>Contact Us</p>
+            </a>
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
-        <div>contact@gmail.com</div>
-        <div>084-444-4444</div>
-        <div>© MonkeyDB Hostel All rights reserved</div>
+      <div class="flex flex-col justify-center">
+        <div>
+          <p class="font-bold">SOCIALS</p>
+        </div>
+        <div class="pt-3 gap-1.25 flex flex-col">
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>Facebook</p>
+            </a>
+          </div>
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>Instagram</p>
+            </a>
+          </div>
+          <div class="hover:bg-[#54504A] rounded-lg">
+            <a href="#">
+              <p>Twitter</p>
+            </a>
+          </div>
+        </div>
       </div>
-    </footer>
+      <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col w-2/3">
+          <p class="font-bold">HEAD OFFICE</p>
+          <div class="pt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            possimus?
+          </div>
+        </div>
+        <div class="flex flex-col pb-5">
+          <div>NEWS LETTER</div>
+          <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3 shadow-[var(--box-shadow)]">
+            <input type="email" name="" id="" placeholder="Enter your email address" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
+      <div>contact@gmail.com</div>
+      <div>084-444-4444</div>
+      <div>© MonkeyDB Hostel All rights reserved</div>
+    </div>
+  </footer>
 </body>
+
 </html>
