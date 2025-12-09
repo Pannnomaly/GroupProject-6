@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Booking</title>
     <link rel="stylesheet" href="booking-page.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --font-sans: "Poppins", sans-serif;
+      }
+    </style>
 </head>
 
-<body>
+<body class="font-sans">
     <header class="main-header">
         <div class="header-content">
             <button class="back-button">
@@ -18,19 +27,12 @@
                 </svg>
                 Back
             </button>
-            <button class="next-button">
-                Next
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
         </div>
     </header>
 
     <div class="booking-container">
         <div class="booking-header">
-            <h2>Complete Your Booking</h2>
+            <h2 class="text-3xl font-bold">Complete Your Booking</h2>
         </div>
         <div class="booking-layout">
             <!-- Main Content -->
@@ -38,7 +40,7 @@
                 <!-- Enter your details -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Enter your details</h2>
+                        <p class="text-xl font-semibold">Enter your details</p>
                     </div>
                     <div class="section-content">
                         <div class="form-group">
@@ -78,7 +80,7 @@
                 <!-- Select a Payment method -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Select a Payment Method</h2>
+                        <p class="text-xl font-semibold">Select a Payment Method</p>
                     </div>
                     <div class="section-content">
                         <div class="radio-group">
@@ -101,7 +103,7 @@
                 <!-- Optional Payment Form -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Optional Payment Form</h2>
+                        <p class="text-xl font-semibold">Optional Payment Form</p>
                     </div>
                     <div class="section-content">
                         <div class="form-group">
@@ -119,7 +121,7 @@
                 <!-- Arrival details -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Arrival details</h2>
+                        <p class="text-xl font-semibold">Arrival details</p>
                     </div>
                     <div class="section-content">
                         <div class="form-group">
@@ -150,7 +152,7 @@
                 <!-- Reservation Summary -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Reservation Summary</h2>
+                        <p class="text-xl font-semibold">Reservation Summary</p>
                     </div>
                     <div class="section-content">
                         <div class="hotel-info">
@@ -189,7 +191,7 @@
                 <!-- Special request -->
                 <div class="form-section">
                     <div class="section-header">
-                        <h2>Your special request</h2>
+                        <p class="text-xl font-semibold">Your special request</p>
                     </div>
                     <div class="section-content">
                         <textarea rows="4" placeholder="Enter any special requests here..."></textarea>
