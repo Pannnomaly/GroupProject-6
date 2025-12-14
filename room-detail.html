@@ -6,21 +6,79 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>monkyDB Hostel</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --font-sans: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
+
+        --background-color-nav: #d9d9d9;
+        --background-color-footer: #635f58;
+        --background-color-mainLeft: #d9d9d9;
+        --background-color-mainRight: #f5f5f5;
+        --background-color-button: #e8eaec;
+        --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+        --font-color-primary: #111;
+        --font-color-secondary: #808080;
+
+        --nav-height: 64px;
+        --footer-height: 256px;
+      }
+    </style>
   </head>
-  <body class="bg-[#f6f6f6] text-gray-800">
+  <body class="font-sans bg-[#f6f6f6] text-gray-800">
     <!-- NAVBAR -->
-    <nav class="w-full bg-white shadow-sm py-4 px-8 flex items-center justify-between">
-      <div class="text-2xl font-bold">LOGO</div>
-      <ul class="hidden md:flex space-x-10 text-sm font-medium">
-        <li><a href="#" class="hover:underline">Find a Property</a></li>
-        <li><a href="#" class="hover:underline">Share Stays</a></li>
-        <li><a href="#" class="hover:underline">Norcal Guides</a></li>
-        <li><a href="#" class="hover:underline">Download Mobile App</a></li>
-      </ul>
-      <button class="border px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100">
-        Sign in / Register
-      </button>
-    </nav>
+    <header class="h-[64px] bg-[#eff0f2] shadow-md shadow-[#8b8b8b] text-[#111] font-medium">
+      <nav class="h-[64px] flex items-center justify-between no-underline text-[22px]">
+        <div class="flex items-center pl-10">
+          <div>
+            <a href="#"><img class="w-12" src="images/ic-logo.svg" alt="Hotel Logo" /></a>
+          </div>
+          <div>
+            <a href="./index.html">
+              <p class="font-bold text-center">MonkeyDB</p>
+            </a>
+          </div>
+          <div>
+            <a href="./index.html">
+              <p class="text-[#808080] text-center">Hostel</p>
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-4 pr-10 h-full">
+          <div
+            class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"
+          >
+            <a href="./user-profile.html">
+              <p class="text-center">User</p>
+            </a>
+          </div>
+          <div
+            class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"
+          >
+            <a href="./index.html">
+              <p class="text-center">Availability</p>
+            </a>
+          </div>
+          <div
+            class="h-full px-3 flex justify-center items-center hover:bg-[#CBCCCE] cursor-pointer"
+          >
+            <a href="./index.html">
+              <p class="text-center">Contact Us</p>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Sign In and Register Bar -->
     <!-- Mobile -->
@@ -28,12 +86,10 @@
       <div class="bg-white shadow-lg rounded-2xl flex flex-col gap-4 px-4 py-5 w-full max-w-md">
         <!-- Guests -->
         <div class="relative">
-          <button class="bg-red-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
-            2 guests
-          </button>
+          <button class="bg-red-500 text-white px-4 py-2 text-sm font-medium">2 guests</button>
 
           <!-- show/hide guests -->
-          <div class="absolute bg-white shadow-lg rounded-xl p-4 text-sm mt-2 hidden">
+          <div class="absolute bg-white shadow-lg p-4 text-sm mt-2 hidden">
             <p>Adults 0</p>
             <p>Child 0</p>
           </div>
@@ -42,16 +98,18 @@
         <!-- Check In / Check Out -->
         <div class="w-full">
           <button
-            class="border border-black bg-gray-200 w-full px-4 py-2 rounded-xl hover:bg-gray-100 font-medium"
+            class="border border-black bg-gray-200 w-full px-4 py-2 hover:bg-gray-100 font-medium"
           >
             Check In || Check Out
           </button>
         </div>
 
         <div class="flex justify-between items-center w-full">
-          <button class="px-4 py-3 rounded-xl hover:bg-gray-100 font-medium w-full text-left">
-            Sign in / Register
-          </button>
+          <a href="./login.html">
+            <button class="px-4 py-3 hover:bg-gray-100 font-medium w-full text-left">
+              Sign in / Register
+            </button>
+          </a>
           <img
             src="./images/room-detail/person.svg"
             height="32px"
@@ -65,34 +123,30 @@
     <!-- Sign In and Register Bar -->
     <!-- Desktop -->
     <section class="hidden md:flex justify-center w-full mt-10 px-4">
-      <div
-        class="bg-white shadow-lg rounded-full flex items-center gap-4 px-6 py-3 w-full max-w-4xl"
-      >
+      <div class="bg-white shadow-lg flex items-center gap-4 px-6 py-3 w-full max-w-4xl">
         <!-- Guests -->
         <div class="relative">
-          <button class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-            2 guests
-          </button>
+          <button class="bg-red-500 text-white px-4 py-2 text-sm font-medium">2 guests</button>
 
           <!-- show/hide guests -->
-          <div class="absolute bg-white shadow-lg rounded-xl p-4 text-sm mt-2 hidden">
+          <div class="absolute bg-white shadow-lg p-4 text-sm mt-2 hidden">
             <p>Adults 0</p>
             <p>Child 0</p>
           </div>
         </div>
 
         <div class="flex flex-1 justify-center items-center gap-4">
-          <button
-            class="border border-black bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-100 font-medium"
-          >
+          <button class="border border-black bg-gray-200 px-4 py-2 hover:bg-gray-100 font-medium">
             Check In || Check Out
           </button>
         </div>
 
         <div class="flex justify-between">
-          <button class="ml-auto px-4 py-2 rounded-full hover:bg-gray-100 font-medium">
-            Sign in / Register
-          </button>
+          <a href="./login.html">
+            <button class="ml-auto px-4 py-2 hover:bg-gray-100 font-medium">
+              Sign in / Register
+            </button>
+          </a>
           <img
             src="./images/room-detail/person.svg"
             height="32px"
@@ -145,196 +199,223 @@
     <section
       class="w-full max-w-6xl mx-auto mt-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
     >
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/family/olexandr-ignatov-w72a24brINI-unsplash_1.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/family/point3d-commercial-imaging-ltd-_Swg04CP0bU-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/two-bed/138761299.png"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/two-bed/139042512.png"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/two-bed/erin-brundage-w8mrCVlTPhw-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/two-bed/pexels-pixabay-276671.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/two-bed/yizack-rangel-O_XmoLGBMrw-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/one-bed/227707266.png"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/one-bed/alex-tyson-CMKobKs3mn8-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
-        <img
-          src="./images/room-detail/one-bed/christina-radevich-kQjEq2bNFS0-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
-        />
-        <h3 class="mt-3 font-medium">Standard Room</h3>
-        <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
-      </div>
-
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/one-bed/pexels-andrew-3201763.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
-          src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          src="./images/room-detail/one-bed/pexels-andrew-3201763.jpg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
 
-      <div class="bg-white border rounded-xl p-4 shadow-sm">
+      <div class="bg-white border p-4 shadow-sm">
         <img
           src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
-          class="open-modal w-full h-40 bg-gray-200 rounded-lg"
+          class="open-modal w-full h-40 bg-gray-200"
         />
         <h3 class="mt-3 font-medium">Standard Room</h3>
         <p class="text-sm text-gray-500">Daily bed</p>
-        <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm rounded-full">
-          Booking
-        </button>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
+      </div>
+
+      <div class="bg-white border p-4 shadow-sm">
+        <img
+          src="./images/room-detail/one-bed/valentina-kondrasyuk-FTXDjzOVi7I-unsplash.jpg"
+          class="open-modal w-full h-40 bg-gray-200"
+        />
+        <h3 class="mt-3 font-medium">Standard Room</h3>
+        <p class="text-sm text-gray-500">Daily bed</p>
+        <a href="./booking-page.html">
+          <button class="mt-3 bg-black hover:bg-[#333] text-white px-4 py-2 text-sm">
+            Booking
+          </button>
+        </a>
       </div>
     </section>
 
     <!-- Modal-Detail -->
     <section
       id="my-modal"
-      class="hidden fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[55%] z-50 max-w-4xl overflow-y-auto max-h-[90vh] bg-[#ede8dc] mt-10 p-8 border border-black border-opacity-30 rounded-xl shadow"
+      class="hidden fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[55%] z-50 max-w-4xl overflow-y-auto max-h-[90vh] bg-[#ede8dc] mt-10 p-8 border border-black border-opacity-30 shadow"
     >
-      <button
-        id="close-modal"
-        class="absolute top-4 right-4 px-3 py-1 bg-black text-white rounded-full"
-      >
+      <button id="close-modal" class="absolute top-4 right-4 px-3 py-1 bg-black text-white">
         X
       </button>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -342,16 +423,18 @@
           <img
             id="modal-image"
             src="./images/room-detail/family/i-home-D-aY4aGgduE-unsplash.jpg"
-            class="rounded-lg shadow cursor-pointer"
+            class="shadow cursor-pointer"
           />
         </div>
         <div>
           <h2 class="font-semibold text-lg">Fully Furnished Apartment</h2>
           <p class="text-sm text-gray-600 mt-2">Check in: 12 Mar 2024</p>
-          <p class="text-sm text-gray-600">Duration: Long (2 - 5 Years)</p>
-          <p class="text-sm text-gray-600">Guests: 4 Adults</p>
+          <p class="text-sm text-gray-600 mt-2">Duration: Long (2 - 5 Years)</p>
+          <p class="text-sm text-gray-600 mt-2">Guests: 4 Adults</p>
           <p class="text-sm mt-2 font-bold">$ 1000 USD</p>
-          <button class="mt-4 border px-4 py-2 rounded-full">Reserve</button>
+          <a href="./booking-page.html" alt="booking-page">
+            <button class="mt-4 border border-black bg-gray-200 px-3 py-1">Reserve</button>
+          </a>
         </div>
       </div>
 
@@ -388,7 +471,7 @@
 
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Payment Method -->
-        <div class="bg-white rounded-lg p-6 shadow">
+        <div class="bg-white p-6 shadow">
           <h3 class="font-medium mb-4">Select a payment method</h3>
           <div class="space-y-3">
             <div class="border p-3 rounded flex items-center gap-3 cursor-pointer">
@@ -439,10 +522,10 @@
           </div>
 
           <div class="flex justify-between mt-6">
-            <button class="px-6 py-2 border rounded-full">Back</button>
-            <button class="px-6 py-2 bg-black hover:bg-gray-700 text-white rounded-full">
-              Confirm payment
-            </button>
+            <a href="./room-detail.html" alt="room-detail">
+              <button class="px-6 py-2 border">Back</button>
+            </a>
+            <button class="px-6 py-2 bg-black hover:bg-gray-700 text-white">Confirm payment</button>
           </div>
         </div>
       </div>
@@ -451,44 +534,84 @@
     <div id="modal-backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
 
     <!-- FOOTER -->
-    <footer class="bg-[#4c453f] text-white mt-20 py-16 px-10">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div>
-          <h3 class="text-xl font-bold mb-4">LOGO</h3>
-          <p class="text-sm">contact@agency</p>
-          <p class="text-sm mt-2">123-456-7890</p>
+    <footer
+      class="bg-[#635f58] h-[256px] shadow-md shadow-[#8b8b8b] mt-10 flex flex-col items-center justify-between text-[#111] font-medium"
+    >
+      <div class="flex items-start justify-around pt-5 w-5/6 h-full text-[17px]">
+        <div class="my-auto">
+          <div>
+            <a href="#"><img class="w-20" src="images/ic-logo.svg" alt="Hotel Logo" /></a>
+          </div>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-3">Sitemap</h4>
-          <ul class="text-sm space-y-2">
-            <li>Hotels</li>
-            <li>Rooms</li>
-            <li>Members</li>
-            <li>Contact</li>
-          </ul>
+        <div class="flex flex-col justify-center">
+          <div>
+            <p class="font-bold">SITE MAP</p>
+          </div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>User</p>
+              </a>
+            </div>
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>Availability</p>
+              </a>
+            </div>
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>Contact Us</p>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-3">Socials</h4>
-          <ul class="text-sm space-y-2">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
-          </ul>
+        <div class="flex flex-col justify-center">
+          <div>
+            <p class="font-bold">SOCIALS</p>
+          </div>
+          <div class="pt-3 gap-1.25 flex flex-col">
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>Facebook</p>
+              </a>
+            </div>
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>Instagram</p>
+              </a>
+            </div>
+            <div class="hover:bg-[#54504A]">
+              <a href="#">
+                <p>Twitter</p>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-3">Newsletter</h4>
-          <input
-            type="text"
-            placeholder="Enter your email"
-            class="px-3 py-2 text-black rounded-lg w-full"
-          />
-          <button class="mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-medium">
-            Subscribe
-          </button>
+        <div class="flex flex-col justify-between h-full">
+          <div class="flex flex-col w-2/3">
+            <p class="font-bold">HEAD OFFICE</p>
+            <div class="pt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, possimus?
+            </div>
+          </div>
+          <div class="flex flex-col pb-5">
+            <div>NEWS LETTER</div>
+            <div class="w-2/3 bg-[#F5F5F5] rounded-md mt-3 shadow-md shadow-[#8b8b8b]">
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your email address"
+                class="w-full"
+              />
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="flex items-center justify-around pb-5 w-5/6 text-[17px]">
+        <div>contact@gmail.com</div>
+        <div>084-444-4444</div>
+        <div>© MonkeyDB Hostel All rights reserved</div>
       </div>
     </footer>
 
