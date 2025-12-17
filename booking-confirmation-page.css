@@ -1,4 +1,4 @@
-/* style of Booking-confirmation */
+* style of Booking-confirmation */
         * {
             margin: 0;
             padding: 0;
@@ -93,11 +93,42 @@
             color: #374151;
         }
 
+        .button-container {
+            text-align: right;
+            margin: 1.5rem 0;
+            clear: both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #a3835ba1;
+            color: rgb(74, 70, 68);
+            border: 2px solid #876048c0;
+            border-radius: 80px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            position: relative; /* เพิ่มบรรทัดนี้ */
+    top: -2px; /* เพิ่มบรรทัดนี้ (ลองเปลี่ยนค่าตามที่ต้องการ) */
+}
+
+        .cta-button:hover {
+            font-weight: bold;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+        }
+
         .footer {
             text-align: center;
-            margin-top: 2rem;
-            /* padding-top: 1.5rem; */
-            /* border-top: 1px solid #e5e7eb; */
+            padding-top: 1.5rem;
+            clear: both;
         }
 
         .footer p {
